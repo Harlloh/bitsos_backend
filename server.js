@@ -78,7 +78,7 @@ router.post("/", (req, res) => {
     html: `<p>Dear ${name},</p>
       <p>Your complaint registration has been received. Our team will start working on it shortly.</p>
       <p>You will be contacted via email for further details.</p>
-      <p>Best regards,<br/>Bitsos inc</p>`,
+      <p>Best regards,<br/>Shieldcrypt inc</p>`,
   };
 
   // Sending emails
