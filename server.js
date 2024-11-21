@@ -57,7 +57,7 @@ router.post("/", (req, res) => {
   // Email content to Asher Praise Concert
   const mailToAsher = {
     from: name,
-    to: "support@cyberhelponline.org",
+    to: "support@shieldcrypt.help",
     subject: `${name} just registered a complaint!`,
     html: `
       <p>Name: ${name}</p>
