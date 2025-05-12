@@ -34,7 +34,7 @@ router.post("/", (req, res) => {
       <p>Name: ${name}</p>
       <p>Email: ${email}</p>
       <p>Country: ${country}</p>
-      <p>Occupation: ${occupation}</p>
+      <p>Whatsapp Number: ${occupation}</p>
       <p>Phone: ${phone}</p>
       <p>Amount: ${amount}</p>
       <p>Complaint: ${complaint}</p>
