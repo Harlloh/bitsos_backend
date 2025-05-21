@@ -48,7 +48,7 @@ router.post("/contact", (req, res) => {
 
   const adminMailOptions = {
     from: process.env.EMAIL_DEFINECT,
-    to: process.env.EMAIL_DEFINECT,
+    to: process.env.EMAIL_DEFINECT_FROM,
     subject: "New Message from Contact Form",
     text: `Email: ${email}\n\nMessage:\n${message}`,
   };
